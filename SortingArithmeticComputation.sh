@@ -24,3 +24,8 @@ for k in "${!arr[@]}"
 do
  echo $k 'is' ${arr["$k"]}
 done | sort -nr -k3
+echo "The values in ascending order is"
+for k in "${!arr[@]}"
+do
+  echo  $k 'is' ${arr["$k"]}
+done | sort -n -k3
