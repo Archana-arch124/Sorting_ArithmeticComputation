@@ -19,3 +19,8 @@ compute["result"]=$result4
 arr=( [result1]=$result1 [result2]=$result2 [result3]=$result3 [result4]=$result4 )
 echo "All values stored in a dictionary:${arr[@]}"
 
+echo "The values in descending order is"
+for k in "${!arr[@]}"
+do
+ echo $k 'is' ${arr["$k"]}
+done | sort -nr -k3
